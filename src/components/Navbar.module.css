@@ -1,0 +1,200 @@
+.navbar {
+  background-color: #1f2937;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #3b82f6;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: rgba(255,255,255,0.02);
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 2px solid transparent;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.menu li a:hover {
+  color: #3b82f6;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactButton {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.45rem 0.9rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.phoneButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: white;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.phoneButton:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.phoneButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Active link styles */
+.activeLink {
+  color: white;
+  background-color: rgba(59, 130, 246, 0.3);
+  font-weight: 700;
+  border-bottom: 2px solid #3b82f6;
+}
+
+.activeContact {
+  background-color: #1d4ed8;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .contactButton {
+    display: none;
+  }
+
+  .phoneButton {
+    display: block;
+  }
+
+  .center {
+    position: static;
+    transform: none;
+    width: 100%;
+    background-color: #111827;
+    margin-top: 0.25rem;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+    background-color: #111827;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .menu.open {
+    max-height: 400px;
+  }
+
+  .menu li {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #374151;
+  }
+
+  .menu li a {
+    display: block;
+  }
+
+  .hamburger span.active:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+  }
+
+  .hamburger span.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger span.active:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+}
