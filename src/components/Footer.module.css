@@ -1,9 +1,9 @@
 .footer {
-  background-color: #f0f4f8;
+  background-color: #f8fafc;
   color: #333;
-  padding: 3rem 0 1rem;
+  padding: 4rem 0 1.5rem;
   margin-top: 4rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e2e8f0;
 }
 
 .container {
@@ -11,16 +11,21 @@
   margin: 0 auto;
   padding: 0 1.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
   margin-bottom: 2rem;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
 .section h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .section ul {
@@ -37,85 +42,126 @@
   text-decoration: none;
   color: #4b5563;
   transition: color 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
+  display: inline-block;
 }
 
 .section ul li a:hover {
-  color: #3b82f6;
+  color: #2563eb;
   font-weight: 500;
 }
 
-.logo {
+/* Contact & Brand Section */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 2rem;
+  border-left: 1px solid #e2e8f0;
+}
+
+.brand {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.logoContainer {
+  margin-bottom: 0.75rem;
+}
+
+.logoText {
   font-size: 1.5rem;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 0.5rem;
+  display: block;
 }
 
 .tagline {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.followUs {
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .followUs h4 {
-  font-size: 0.95rem;
-  color: #333;
-  margin-bottom: 0.75rem;
+  font-size: 0.9375rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .socialLinks {
   display: flex;
-  gap: 1rem;
+  gap: 0.75rem;
+  align-items: center;
 }
 
-.socialLinks a {
+.socialLink {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #3b82f6;
-  color: white;
+  background-color: #e5e7eb;
   text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
 }
 
-.socialLinks a:hover {
+.socialLink:hover {
   background-color: #2563eb;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 .contact {
-  font-size: 0.9rem;
-  line-height: 1.8;
+  width: 100%;
+}
+
+.contact h4 {
+  font-size: 0.9375rem;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .address {
+  font-size: 0.875rem;
   color: #4b5563;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
 }
 
-.contact a {
-  color: #3b82f6;
+.contactItem {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.contactItem a {
+  color: #2563eb;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact a:hover {
-  color: #2563eb;
+.contactItem a:hover {
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
+/* Bottom Footer */
 .bottom {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.5rem 1.5rem 0;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,8 +170,8 @@
 }
 
 .copyright {
-  font-size: 0.85rem;
-  color: #666;
+  font-size: 0.875rem;
+  color: #6b7280;
   margin: 0;
 }
 
@@ -133,77 +179,116 @@
   display: flex;
   gap: 1rem;
   align-items: center;
-  font-size: 0.85rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
 }
 
 .policies a {
-  color: #3b82f6;
+  color: #2563eb;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .policies a:hover {
-  color: #2563eb;
+  color: #1d4ed8;
   text-decoration: underline;
 }
 
 .policies span {
-  color: #999;
+  color: #9ca3af;
 }
 
-/* Responsive */
-/* Tablet: stack Services and Company vertically (up / down) */
+/* Responsive Design */
 @media (max-width: 1024px) {
   .container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
   }
 
-  /* Ensure contact stays at top, then services, then company, then logo */
-  .container > .section:nth-child(4) { order: 1; }
-  .container > .section:nth-child(2) { order: 2; }
-  .container > .section:nth-child(3) { order: 3; }
-  .container > .section:nth-child(1) { order: 4; }
-
-  .container > .section { width: 100%; }
-}
-
-@media (max-width: 1024px) {
-  /* Stack main footer sections vertically in order: Get In Touch, Our Services, About Company, Logo */
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: stretch;
+  .contactSection {
+    grid-column: 1 / -1;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+    padding-left: 0;
+    padding-top: 2rem;
+    margin-top: 1rem;
   }
 
-  /* Reorder sections so contact appears first */
-  .container > .section:nth-child(1) { order: 4; } /* logo */
-  .container > .section:nth-child(2) { order: 3; } /* services */
-  .container > .section:nth-child(3) { order: 4; } /* company */
-  .container > .section:nth-child(4) { order: 1; } /* contact */
-
-  .container > .section { width: 100%; }
-
-  .bottom {
-    flex-direction: column;
-    text-align: center;
+  .contactSection {
     align-items: center;
+    text-align: center;
+  }
+
+  .brand {
+    text-align: center;
+  }
+
+  .socialLinks {
+    justify-content: center;
   }
 }
 
 @media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
   .container {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  .contactSection {
+    grid-column: 1;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 2rem;
+    margin-top: 0;
+  }
+
   .bottom {
     flex-direction: column;
     text-align: center;
+    align-items: center;
+    padding-top: 1.5rem;
   }
 
   .policies {
     justify-content: center;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 2.5rem 0 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .section h3 {
+    font-size: 1rem;
+  }
+
+  .logoText {
+    font-size: 1.25rem;
+  }
+
+  .bottom {
+    padding: 1rem 1rem 0;
+  }
+
+  .policies {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .policies span {
+    display: none;
   }
 }

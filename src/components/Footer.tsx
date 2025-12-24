@@ -7,7 +7,6 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
-        {/* Left Section}        
         {/* Services Section */}
         <div className={styles.section}>
           <h3>Our Services</h3>
@@ -19,6 +18,7 @@ export default function Footer() {
             <li><Link href="/services#consulting">Consulting</Link></li>
           </ul>
         </div>
+        
         {/* Company Section */}
         <div className={styles.section}>
           <h3>About Company</h3>
@@ -27,39 +27,48 @@ export default function Footer() {
             <li><Link href="/services">Services</Link></li>
             <li><Link href="/industries">Industries</Link></li>
             <li><Link href="/blog">Latest Blogs</Link></li>
-            <li><Link href="/careers">Careers</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
-        {/*right section}
-        {/* Contact Section */}
-        <div className={styles.section}>
-          <h3>Get In Touch</h3>
-          <div className={styles.contact}>
-            <p className={styles.address}>
-              📍 123 Tech Street, City Name<br />
-              State/Province, Country - 123456
-            </p>
-            <p>
-              📞 <a href="tel:+1234567890">+1 (234) 567-890</a>
-            </p>
-            <p>
-              ✉️ <a href="mailto:info@myapp.com">info@myapp.com</a>
-            </p>
-            <p>
-              💬 <a href="#skype">Call on Skype</a>
-            </p>
+        
+        {/* Contact & Brand Section */}
+        <div className={styles.contactSection}>
+          {/* Logo & Tagline */}
+          <div className={styles.brand}>
+            <div className={styles.logoContainer}>
+              <span className={styles.logoText}>Sling Infocom</span>
+            </div>
+            <p className={styles.tagline}>Building digital solutions for tomorrow</p>
           </div>
-        </div>
-        <div className={styles.section}>
-          <div className={styles.logo}>MyApp</div>
-          <p className={styles.tagline}>Building digital solutions for tomorrow</p>
+          
+          {/* Social Links */}
           <div className={styles.followUs}>
             <h4>Follow us</h4>
             <div className={styles.socialLinks}>
-              <a href="#" aria-label="Facebook">f</a>
-              <a href="#" aria-label="Twitter">𝕏</a>
-              <a href="#" aria-label="LinkedIn">in</a>
+              <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <span>📘</span>
+              </a>
+              <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <span>🐦</span>
+              </a>
+              <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+                <span>💼</span>
+              </a>
             </div>
+          </div>
+          
+          {/* Contact Info */}
+          <div className={styles.contact}>
+            <h4>Contact</h4>
+            <p className={styles.address}>
+              📍 123 Tech Street, City Name<br />State/Province, Country - 123456
+            </p>
+            <p className={styles.contactItem}>
+              📞 <a href="tel:+1234567890">+1 (234) 567-890</a>
+            </p>
+            <p className={styles.contactItem}>
+              ✉️ <a href="mailto:info@slinginfocom.com">info@slinginfocom.com</a>
+            </p>
           </div>
         </div>
       </div>
@@ -67,7 +76,7 @@ export default function Footer() {
       {/* Bottom Footer */}
       <div className={styles.bottom}>
         <p className={styles.copyright}>
-          © 2025 MyApp. All rights reserved.
+          © 2025 Sling Infocom. All rights reserved.
         </p>
         <div className={styles.policies}>
           <Link href="#privacy">Privacy Policy</Link>

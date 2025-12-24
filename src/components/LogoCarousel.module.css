@@ -1,0 +1,299 @@
+.carouselSection {
+  padding: 4rem 0;
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.carouselWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.carousel {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+  will-change: transform;
+}
+
+.carouselWrapper:hover .carousel {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
+.logoItem {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 0 2rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.logoItem:hover {
+  opacity: 0.8;
+}
+
+/* Logo 1 Styles */
+.logo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo1Shapes {
+  display: flex;
+  gap: 0.25rem;
+  align-items: flex-end;
+}
+
+.logo1Shape {
+  width: 8px;
+  height: 20px;
+  background-color: #9ca3af;
+  border-radius: 2px;
+}
+
+.logo1Text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+}
+
+/* Logo 2 Styles */
+.logo2 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo2L {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+
+.logo2Square {
+  width: 32px;
+  height: 32px;
+  background-color: #374151;
+  border-radius: 4px;
+  position: relative;
+}
+
+.logo2Square::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: #f9fafb;
+  border-radius: 2px 0 0 0;
+}
+
+.logo2Text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #374151;
+  letter-spacing: 0.05em;
+}
+
+/* Logo 3 Styles */
+.logo3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo3Shapes {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo3Square {
+  width: 24px;
+  height: 24px;
+  background-color: #374151;
+  border-radius: 4px;
+}
+
+.logo3Circle {
+  width: 24px;
+  height: 24px;
+  background-color: #374151;
+  border-radius: 50%;
+}
+
+.logo3Text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  letter-spacing: 0.02em;
+}
+
+/* Logo 4 Styles */
+.logo4 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo4Bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.logo4Bar {
+  width: 6px;
+  background-color: #374151;
+  border-radius: 2px;
+}
+
+.logo4Text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #374151;
+  letter-spacing: 0.05em;
+}
+
+/* Logo 5 Styles */
+.logo5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo5Dots {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.25rem;
+  width: 48px;
+  height: 48px;
+}
+
+.logo5Dot {
+  width: 12px;
+  height: 12px;
+  background-color: #374151;
+  border-radius: 50%;
+}
+
+.logo5Text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  letter-spacing: 0.02em;
+}
+
+/* Logo 6 Styles */
+.logo6 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+}
+
+.logo6 svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .carousel {
+    gap: 3rem;
+  }
+
+  .logoItem {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselSection {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .carousel {
+    gap: 2.5rem;
+  }
+
+  .logoItem {
+    height: 70px;
+    padding: 0 1rem;
+  }
+
+  .logo1Text,
+  .logo3Text,
+  .logo5Text {
+    font-size: 0.75rem;
+  }
+
+  .logo2Text {
+    font-size: 1.125rem;
+  }
+
+  .logo4Text {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    gap: 2rem;
+  }
+
+  .logoItem {
+    height: 60px;
+    padding: 0 0.75rem;
+  }
+}
+

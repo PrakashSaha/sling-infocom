@@ -1,0 +1,136 @@
+.blogContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px 32px 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a202c;
+  margin-bottom: 0.25em;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.searchFilterRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 220px;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+.searchInput:focus {
+  border: 1.5px solid #3182ce;
+  outline: none;
+}
+
+.categorySelect {
+  min-width: 160px;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.07);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s, transform 0.2s;
+  border: 1px solid #f1f1f1;
+}
+.card:hover {
+  box-shadow: 0 6px 24px rgba(30,41,59,0.13);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.cardImg {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #f3f3f3;
+}
+
+.cardContent {
+  padding: 20px 18px 16px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.cardDesc {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.cardMeta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.readMore {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-top: 8px;
+  transition: color 0.18s;
+}
+.readMore:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .header { align-items: center; }
+  .title { font-size: 2rem; }
+  .grid { gap: 18px; }
+  .cardImg { height: 140px; }
+  .cardContent { padding: 14px 10px 12px 10px; }
+}
